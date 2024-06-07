@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <nav>
+            <a href="{{ url_for('index') }}">USE WEBCAM</a>
+            <a href="{{ url_for('upload_files') }}">UPLOAD FILES</a>
+        </nav>
+    </div>
+    <div class="content">
+        <h1>Upload file</h1>
+        <form action="{{ url_for('upload_files') }}" method="post" enctype="multipart/form-data">
+            <label for="file" id="file-label" class="custom-file-label">Choose File</label>
+            <input type="file" name="file" id="file" accept="image/*,video/*" onchange="displayFileName()">
+            <button type="submit">Upload</button>
+        </form>
+        {% if filename %}
+            <p>File successfully uploaded and displayed below</p>
+            {% if filetype == 'image' %}
+                <img src="{{ url_for('static', filename='uploads/' ~ filename) }}" alt="Uploaded Image">
+            {% elif filetype == 'video' %}
+                <video width="600" controls>
+                    <source src="{{ url_for('static', filename='uploads/' ~ filename) }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% endif %}
+        {% endif %}
+    </div>
+    <script>
+        function displayFileName() {
+            var input = document.getElementById('file');
+            var fileName = input.files[0].name;
+            document.getElementById('file-label').innerText = fileName;
+        }
+    </script>
+</body>
+</html>

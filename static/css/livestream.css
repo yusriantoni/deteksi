@@ -1,0 +1,74 @@
+/* static/css/livestream.css */
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: #333;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Ini akan menengahkan konten secara vertikal */
+    position: relative;
+    padding-bottom: 100px; /* Ketinggian footer */
+}
+
+.header {
+    background-color: #4CAF50;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header img {
+    height: 100px; /* Sesuaikan tinggi logo */
+    border: none;
+}
+
+nav {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 150px; /* Tambahkan margin top untuk memberi jarak dari header */
+    text-align: center;
+    flex: 1;
+}
+
+.content img, .content video {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}

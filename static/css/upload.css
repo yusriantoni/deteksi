@@ -1,0 +1,83 @@
+/* static/css/upload.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../images/background-main.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: #4CAF50;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start; /* Pindahkan logo ke kiri */
+    align-items: center;
+    position: relative;
+}
+
+.header img {
+    height: 100px; /* Sesuaikan tinggi logo */
+    margin-left: 20px; /* Tambahkan margin kiri untuk memberi sedikit ruang */
+    border: none;
+    
+}
+
+nav {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-top: 20px; /* Kurangi margin atas untuk menaikkan bar upload file */
+}
+
+form {
+    margin: 20px 0;
+}
+
+form input[type="file"] {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}

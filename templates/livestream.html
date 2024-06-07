@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/livestream.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+        <h1>Live Stream</h1>
+    </div>
+    <div class="content">
+        <img src="{{ url_for('video_feed') }}" width="600" alt="Live Stream">
+    </div>
+</body>
+</html>
